@@ -48,7 +48,7 @@ if __name__ == "__main__":
     
     for d in product1:
         product = Product(d["name"], d["price"], d["weight"], d["flammability"])
-        print(product.name)
+        #print(product.name)
         #product.Stealability()
         #product.explode()
 
