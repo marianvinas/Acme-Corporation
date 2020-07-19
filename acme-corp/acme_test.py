@@ -1,6 +1,7 @@
 import unittest
-#from acme import Product
-#from acme_report import generate_products, ADJECTIVES, NOUNS
+import random
+from acme import Product
+from acme_report import generate_products, ADJECTIVES, NOUNS
 
 
 class AcmeProductTests(unittest.TestCase):
