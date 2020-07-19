@@ -8,17 +8,16 @@ class AcmeProductTests(unittest.TestCase):
     """Making sure Acme products are the tops!"""
     def test_default_product_price(self):
         """Test default product price being 10."""
-        prod = Product('Test Product'):
-                pass
+        prod = Product(name='Test Product', price=100, weight=100, flammability=100)
         self.assertEqual(prod.price, 10)
 
     def test_default_product_weight(self):
-        prod = Product('Test Product')
+        prod = Product(name='Test Product', price=100, weight=100, flammability=100)
         self.assertEqual(prod.weight, 20)
 
     def test_stealyboom(self):
         prod = Product(name='Test Product', price=100, weight=100, flammability=100)
-        self.assertEqual(prod.stealability(), "Very stealable!")
+        self.assertEqual(prod.Stealability(), "Very stealable!")
         self.assertEqual(prod.explode(), "...BABOOM!!")
 
 
