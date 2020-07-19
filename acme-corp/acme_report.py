@@ -7,6 +7,7 @@ from acme import Product
 ADJECTIVES = ['Awesome', 'Shiny', 'Impressive', 'Portable', 'Improved']
 NOUNS = ['Anvil', 'Catapult', 'Disguise', 'Mousetrap', '???']
 
+
 def generate_products(num_products=30):
     products = []
     for i in range(num_products):
@@ -19,7 +20,6 @@ def generate_products(num_products=30):
         prod = Product(name, price, weight, flammability)
         products.append(prod)
     return products
-
 
     def generate_products(num_products=30):
         products = []

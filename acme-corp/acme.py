@@ -1,5 +1,6 @@
 import random
 
+
 class Product:
     def __init__(self, name, price, weight, flammability, identifier=[]):
         # these are attributes
@@ -11,9 +12,9 @@ class Product:
 
     def Stealability(self):
         stealability = self.price / self.weight
-        if stealability  < 0.5:
+        if stealability < 0.5:
             print("Not so stealable...")
-        else: 
+        else:
             stealability >= 0.5
             print("Kinda stealable.")
         return print("Very stealable!")
@@ -27,9 +28,12 @@ class Product:
         else:
             print("...it's a glove.")
 
+
 class BoxingGlove(Product):
-    def __init__(self, name, price, weight, glove, flammability=[], identifier=[]):
-        super().__init__(self, name, price, weight, flammability=[], identifier=[])
+    def __init__(self, name, price, weight, glove, flammability=[],
+                 identifier=[]):
+        super().__init__(self, name, price, weight, flammability=[],
+                         identifier=[])
         self.glove = glove
 
     def punch(self):
@@ -43,19 +47,22 @@ class BoxingGlove(Product):
 
 if __name__ == "__main__":
     product1 = [
-        {"name": "A Cool Toy", "price": "10", "weight": "20", "flammability": "0.5", "glove": "10"},
+        {"name": "A Cool Toy", "price": "10", "weight": "20",
+         "flammability": "0.5", "glove": "10"},
     ]
-    
-    for d in product1:
-        product = Product(d["name"], d["price"], d["weight"], d["flammability"])
-        #print(product.name)
-        #product.Stealability()
-        #product.explode()
 
-    for d in product1:    
-        glove = Product(d["name"], d["price"], d["weight"], d["flammability"], d["glove"])
+    for d in product1:
+        product = Product(d["name"], d["price"], d["weight"],
+                          d["flammability"])
+        # print(product.name)
+        # product.Stealability()
+        # product.explode()
+
+    for d in product1:
+        glove = Product(d["name"], d["price"], d["weight"],
+                        d["flammability"], d["glove"])
         print(glove.name)
         print(glove.price)
         print(glove.weight)
-        #glove.punch()
+        # glove.punch()
         glove.explode()
