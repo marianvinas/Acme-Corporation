@@ -12,12 +12,12 @@ class AcmeProductTests(unittest.TestCase):
                             weight=100, flammability=100)
         self.assertEqual(prod.price, 10)
 
-    def test_default_product_weight(self):
+    def test_default_values(self):
         prod = Product(name='Test Product', price=100,
                             weight=100, flammability=100)
         self.assertEqual(prod.weight, 20)
 
-    def test_stealyboom(self):
+    def test_stealability_explode(self):
         prod = Product(name='Test Product', price=100,
                             weight=100, flammability=100)
         self.assertEqual(prod.Stealability(), "Very stealable!")
