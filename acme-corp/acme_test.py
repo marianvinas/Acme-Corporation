@@ -15,13 +15,13 @@ class AcmeProductTests(unittest.TestCase):
     def test_default_values(self):
         prod = Product(name='Test Product', price=100,
                             weight=100, flammability=100)
-        self.assertEqual(prod.weight, 20)
+        self.assertEqual(prod.weight, 10)
 
     def test_stealability_explode(self):
         prod = Product(name='Test Product', price=100,
                             weight=100, flammability=100)
-        self.assertEqual(prod.Stealability(), "Very stealable!")
-        self.assertEqual(prod.explode(), "...BABOOM!!")
+        self.assertEqual(prod.stealability(), "Kinda stealable."),
+        self.assertEqual(prod.explode(), "...it's a glove.")
 
 
 class AcmeReportTests(unittest.TestCase):

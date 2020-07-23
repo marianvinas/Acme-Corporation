@@ -10,23 +10,23 @@ class Product:
         self.flammability = 0.5
         self.identifier = random.randint(1000000, 9999999)
 
-    def Stealability(self):
+    def stealability(self):
         stealability = self.price / self.weight
         if stealability < 0.5:
-            print("Not so stealable...")
+            return "Not so stealable..."
         else:
             stealability >= 0.5
-            print("Kinda stealable.")
-        return print("Very stealable!")
+            return "Kinda stealable."
+        return "Very stealable!"
 
     def explode(self):
         explode = self.flammability * self.weight
         if explode < 10:
-            print(f"...it's a glove.")
+            return "...it's a glove."
         elif explode >= 50:
-            print("...boom!")
+            return "...boom!"
         else:
-            print("...it's a glove.")
+            return "...it's a glove."
 
 
 class BoxingGlove(Product):
@@ -39,11 +39,11 @@ class BoxingGlove(Product):
     def punch(self):
         punch = self.weight
         if punch < 5:
-            print(f"That tickles.")
+            return "That tickles."
         elif punch >= 5:
-            print(f"Hey that hurt!")
+            return "Hey that hurt!"
         else:
-            print("OUCH!")
+            return "OUCH!"
 
 if __name__ == "__main__":
     product1 = [
