@@ -45,17 +45,14 @@ def inventory_report(products):
         weight_list.append(product.weight)
         price_list.append(product.price)
         flammability_list.append(product.flammability)
-    uniques = name_list
+    uniques = len(set(name_list))
     mean_weight = sum(weight_list) / len(weight_list)
     mean_price = sum(price_list) / len(price_list)
     mean_flammability = sum(flammability_list) / len(flammability_list)
-    print("Unique product names: {}".format(len(uniques)))
-    # print("ACME INVENTORY REPORT Unique Products = {uniques}"),
-    print("Average price: {}".format((mean_price)))
-    print("Average Weight: {}".format((mean_weight)))
-    print("Average Flammability: {}".format((mean_flammability)))
-
-    # print("Unique product names: {}".format(len(uniques)))
+    print(f"ACME INVENTORY REPORT Unique Products = {uniques} \n",
+           f"Average Price = {mean_price} \n",
+           f"Average Weight = {mean_weight} \n",
+           f"Average Flammability = {mean_flammability}")
 
 if __name__ == '__main__':
     inventory_report(generate_products())
