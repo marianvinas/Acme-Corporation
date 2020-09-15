@@ -2,13 +2,13 @@ import random
 
 
 class Product:
-    def __init__(self, name, price, weight, flammability, identifier=[]):
+    def __init__(self, name, price=10, weight=10, flammability=0.5, identifier=random.randint(1000000, 9999999)):
         # these are attributes
         self.name = name
-        self.price = 10
-        self.weight = 10
-        self.flammability = 0.5
-        self.identifier = random.randint(1000000, 9999999)
+        self.price = price
+        self.weight = weight
+        self.flammability = flammability
+        self.identifier = identifier
 
     def stealability(self):
         stealability = self.price / self.weight
@@ -20,7 +20,7 @@ class Product:
         return "Very stealable!"
 
     def explode(self):
-        explode = self.flammability * self.weight
+        explode = self.weight * self.flammability
         if explode < 10:
             return "...it's a glove."
         elif explode >= 50:
@@ -30,11 +30,9 @@ class Product:
 
 
 class BoxingGlove(Product):
-    def __init__(self, name, price, weight, glove, flammability=[],
-                 identifier=[]):
-        super().__init__(self, name, price, weight, flammability=[],
-                         identifier=[])
-        self.glove = glove
+    def __init__(self, name, price=10, weight=10, flammability=0.5,
+                 identifier=random.randint(1000000, 9999999)):
+        super().__init__(self, name, price, weight, flammability=[], identifier=[])
 
     def punch(self):
         punch = self.weight
@@ -64,5 +62,5 @@ if __name__ == "__main__":
         print(glove.name)
         print(glove.price)
         print(glove.weight)
-        # glove.punch()
-        glove.explode()
+        #glove.punch()
+        #glove.explode()
