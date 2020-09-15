@@ -32,7 +32,7 @@ class Product:
 class BoxingGlove(Product):
     def __init__(self, name, price=10, weight=10, flammability=0.5,
                  identifier=random.randint(1000000, 9999999)):
-        super().__init__(self, name, price, weight, flammability=[], identifier=[])
+        super().__init__(self, name, price, weight, flammability, identifier)
 
     def punch(self):
         punch = self.weight
